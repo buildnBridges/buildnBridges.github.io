@@ -1,23 +1,36 @@
 ul{
-    
     list-style-type: none;
     margin-top: 5px;
-    margin-left: 800px;
-    
-    
+    margin-left: 20px;
+    position: relative;
 }
 ul li{
-    
     margin-bottom: 5px;
     border:2px solid black;
-   
-}
-nav, ul, li,a{
     display: block;
-     
     text-decoration: none;
     width: fit-content;
     padding: 10px;
+}
+ul ul{
+    display: none;
+    position:absolute;
+    top: 100%;
+}
+ul ul li {
+    float: none;
+}
+ul li:hover>ul{
+    display: block;
+}
+ul::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+    
     
 
-}
+
+
