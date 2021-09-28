@@ -1,28 +1,45 @@
+nav {
+    font-family: sans-serif;
+    
+}
+li{
+    
+    display: block;
+}
+
+li:hover{
+    cursor: pointer;
+}
 ul{
+    
     list-style-type: none;
     margin-top: 5px;
-    margin-left: 10px;
+    
     position: relative;
-    margin-left: 740px;
+    margin-left: 640px;
 }
-ul li{
+ul li ul{
     margin-bottom: 5px;
+    
+    position:absolute;
+    display: block;
     border:2px solid black;
     display: block;
     text-decoration: none;
     width: fit-content;
     padding: 10px;
 }
-ul ul{
-    display: none;
-    position:absolute;
-    top: 100%;
-}
-ul ul li {
-    float: none;
-}
-ul li li:hover > ul{
-    display: list-item;
+ul li:hover > ul,
+ul li:focus-within>ul,
+ul li ul:hover{
+    visibility: visible;
+    display: block;
+    margin-left: 10px;
+    position: relative;
+    transition: 1s;
+
+
+
     
 
 }
